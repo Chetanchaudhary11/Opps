@@ -1,0 +1,24 @@
+OOP:--> OOP stands for object oriented programming, it is about creating objects that contain both data and functions.
+-> OOP is faster and easier to execute.
+-> OOP provides a clear structure for the programs.
+-> OOP makes the code easier to maintain, modify and debug.
+-> OOP makes it possible to create full reusable application with less code and shorter development time.
+
+OOP Concepts:-->
+1.Class: class is a user-defined data type that serves as a blueprint for creating objects.
+2.Object: object is an instance of a class.
+3.Encapsulation: Encapsulation is a process of wrapping(bundling) the data(variables) and methods(functions)
+  in a single entity (class).
+4.Inheritance: Inheritance allows a child class(derived) to inherit properties and behaviors from parent class(base).
+5.Polymorphism: when one class having same method name but different parameters (method overloading),
+  when parent class and child class having same method name (method overriding).
+6.Abstraction: Abstraction is a process to hiding unnecessary details from the user.
+7.Constructor: Constructor is a special method that will call automatically when we create object.
+
+Difference between OOP and POP:-->
+OOP: OOP is centered around the concept of objects, which are instances of classes. It emphasizes modeling the
+     problem domain using objects, encapsulating data and behavior into classes, and defining relationships 
+     between objects.
+
+POP: POP is centered around procedures or functions. It focuses on decomposing a problem into a set of procedures 
+     or functions that perform specific tasks and operate on data.     
