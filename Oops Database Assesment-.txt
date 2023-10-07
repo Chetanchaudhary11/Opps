@@ -1,0 +1,52 @@
+Oops Database Assesment:-
+
+BEGIN TRANSACTION;
+
+-- Assuming you have account numbers for A and B
+DECLARE @accountA INT = 12345; -- Replace with actual account numbers
+DECLARE @accountB INT = 67890; -- Replace with actual account numbers
+DECLARE @transferAmount DECIMAL(10, 2) = 100.00; -- Replace with the desired amount
+
+-- Debit from Account A
+UPDATE AccountHolder
+SET balance = balance - @transferAmount
+WHERE account_no = @accountA;
+
+-- Credit to Account B
+UPDATE AccountHolder
+SET balance = balance + @transferAmount
+WHERE account_no = @accountB;
+
+COMMIT;
+
+
+1. HOLDERS CITY 
+
+SELECT *
+FROM AccountHolder
+WHERE city IN (
+    SELECT city
+    FROM AccountHolder
+    GROUP BY city
+    HAVING COUNT(*) > 1
+);
+
+2. ACCOUNT CREATE DATE 
+SELECT account_no, account_holder_name
+FROM AccountHolder
+WHERE DAY(date_of_account_created) > 15;
+
+
+3. BRANCHES EACH CITY 
+
+SELECT branch_city AS city_name, COUNT(*) AS Count_Branch
+FROM Bank
+GROUP BY branch_city;
+
+
+4. BRAND LOAN ID :-
+
+SELECT ah.account_holder_id, ah.account_holder_name, l.branch_id, l.loan_amount
+FROM AccountHolder AS ah
+JOIN Loan AS l ON ah.account_holder_id = l.account_holder_id;
+
